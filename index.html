@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>RenalFlow - مساعدك الذكي لإدارة صحة الكلى | Your Smart Kidney Health Companion</title>
+    <meta name="title" content="RenalFlow - مساعدك الذكي لإدارة صحة الكلى">
+    <meta name="description"
+        content="تطبيق ذكي شامل لمرضى الكلى. تحليل غذائي بالذكاء الاصطناعي، مساعد AI، تتبع المختبرات، وتقارير طبية احترافية. يعمل بدون إنترنت.">
+    <meta name="keywords"
+        content="RenalFlow, صحة الكلى, CKD, أمراض الكلى المزمنة, تغذية كلوية, تطبيق طبي, ذكاء اصطناعي">
+    <meta name="author" content="Feras Swed">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://renalflow.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://renalflow.app/">
+    <meta property="og:title" content="RenalFlow - مساعدك الذكي لإدارة صحة الكلى">
+    <meta property="og:description" content="تطبيق ذكي شامل لمرضى الكلى مع تحليل غذائي بالذكاء الاصطناعي">
+    <meta property="og:image" content="https://renalflow.app/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://renalflow.app/">
+    <meta property="twitter:title" content="RenalFlow - Your Smart Kidney Health Companion">
+    <meta property="twitter:description"
+        content="Smart comprehensive app for kidney patients with AI nutritional analysis">
+    <meta property="twitter:image" content="https://renalflow.app/images/twitter-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "RenalFlow",
+      "alternateName": "رينال فلو",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Android 5.0+",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Feras Swed",
+        "jobTitle": "Medical Software Engineer & Clinical Nutritionist"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Background Animated Blobs -->
+    <div class="bg-blobs">
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+        <div class="bg-blob blob-3"></div>
+    </div>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <img src="images/logo.png" alt="RenalFlow Logo" width="48" height="48">
+                <span data-ar="رينال فلو" data-en="RenalFlow">رينال فلو</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="#features" data-ar="المميزات" data-en="Features">المميزات</a></li>
+                <li><a href="#how-it-works" data-ar="كيف يعمل" data-en="How It Works">كيف يعمل</a></li>
+                <li><a href="#testimonials" data-ar="آراء المستخدمين" data-en="Testimonials">آراء المستخدمين</a></li>
+                <li><a href="#download" data-ar="التحميل" data-en="Download">التحميل</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="lang-toggle" aria-label="Toggle Language">
+                    <i class="fas fa-language"></i>
+                    <span id="langText">EN</span>
+                </button>
+                <a href="#download" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    <span data-ar="تحميل التطبيق" data-en="Download App">تحميل التطبيق</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span data-ar="إصدار 1.0 - متاح الآن" data-en="Version 1.0 - Available Now">إصدار 1.0 - متاح
+                        الآن</span>
+                </div>
+
+                <h1 class="hero-title" data-ar="رحلتك نحو صحة كلوية أفضل تبدأ هنا"
+                    data-en="Your Journey to Better Kidney Health Starts Here">
+                    رحلتك نحو صحة كلوية أفضل تبدأ هنا
+                </h1>
+
+                <h2 class="hero-subtitle" data-ar="RenalFlow - مساعدك الذكي لإدارة النظام الغذائي الكلوي"
+                    data-en="RenalFlow - Your Smart Renal Diet Management Assistant">
+                    RenalFlow - مساعدك الذكي لإدارة النظام الغذائي الكلوي
+                </h2>
+
+                <p class="hero-description"
+                    data-ar="تطبيق ذكي شامل يساعدك على إدارة صحتك الكلوية بثقة. تحليل غذائي متقدم بالذكاء الاصطناعي، مساعد AI ذكي، تتبع دقيق للمختبرات، وتقارير طبية احترافية - كل ذلك في جيبك وبدون إنترنت."
+                    data-en="A comprehensive smart app that helps you manage your kidney health with confidence. Advanced AI nutritional analysis, smart AI assistant, precise lab tracking, and professional medical reports - all in your pocket and offline.">
+                    تطبيق ذكي شامل يساعدك على إدارة صحتك الكلوية بثقة. تحليل غذائي متقدم بالذكاء الاصطناعي، مساعد AI
+                    ذكي، تتبع دقيق للمختبرات، وتقارير طبية احترافية - كل ذلك في جيبك وبدون إنترنت.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary btn-large">
+                        <i class="fab fa-android"></i>
+                        <span data-ar="تحميل للأندرويد" data-en="Download for Android">تحميل للأندرويد</span>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline btn-large">
+                        <i class="fas fa-play-circle"></i>
+                        <span data-ar="شاهد كيف يعمل" data-en="See How It Works">شاهد كيف يعمل</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label" data-ar="مادة غذائية" data-en="Food Items">مادة غذائية</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-ar="يعمل بدون إنترنت" data-en="Works Offline">يعمل بدون إنترنت
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label" data-ar="مراحل CKD" data-en="CKD Stages">مراحل CKD</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <img src="images/hero/app-mockup.png" alt="RenalFlow App Dashboard Screenshot" class="floating"
+                        width="400" height="800">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+            <span data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</span>
+        </div>
+    </section>
+
+    <!-- Problem-Solution Section -->
+    <section class="problem-solution" id="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="التحديات التي يواجهها مرضى الكلى"
+                    data-en="Challenges Faced by Kidney Patients">
+                    التحديات التي يواجهها مرضى الكلى
+                </h2>
+                <p class="section-subtitle"
+                    data-ar="نفهم التحديات اليومية التي تواجهها، ولذلك صممنا RenalFlow ليكون الحل الأمثل"
+                    data-en="We understand the daily challenges you face, that's why we designed RenalFlow to be the perfect solution">
+                    نفهم التحديات اليومية التي تواجهها، ولذلك صممنا RenalFlow ليكون الحل الأمثل
+                </p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon" aria-hidden="true"><i class="fas fa-calculator-alt"></i></div>
+                    <h3 data-ar="صعوبة حساب العناصر الغذائية" data-en="Difficulty Calculating Nutrients">صعوبة حساب
+                        العناصر الغذائية</h3>
+                    <p data-ar="حساب البوتاسيوم والفسفور والصوديوم يدوياً معقد ويستغرق وقتاً طويلاً"
+                        data-en="Manually calculating potassium, phosphorus, and sodium is complex and time-consuming">
+                        حساب البوتاسيوم والفسفور والصوديوم يدوياً معقد ويستغرق وقتاً طويلاً
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon" aria-hidden="true"><i class="fas fa-language"></i></div>
+                    <h3 data-ar="قلة المعلومات بالعربية" data-en="Lack of Arabic Information">قلة المعلومات بالعربية
+                    </h3>
+                    <p data-ar="معظم المصادر الموثوقة باللغة الإنجليزية فقط"
+                        data-en="Most reliable sources are only in English">
+                        معظم المصادر الموثوقة باللغة الإنجليزية فقط
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon" aria-hidden="true"><i class="fas fa-wifi-slash"></i></div>
+                    <h3 data-ar="الحاجة المستمرة للإنترنت" data-en="Constant Need for Internet">الحاجة المستمرة للإنترنت
+                    </h3>
+                    <p data-ar="معظم التطبيقات تتطلب اتصال دائم بالإنترنت"
+                        data-en="Most apps require constant internet connection">
+                        معظم التطبيقات تتطلب اتصال دائم بالإنترنت
+                    </p>
+                </div>
+            </div>
+
+            <div class="transformation-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title" data-ar="RenalFlow يجعل الأمر سهلاً" data-en="RenalFlow Makes It Easy">
+                    RenalFlow يجعل الأمر سهلاً
+                </h2>
+            </div>
+
+            <div class="problem-grid">
+                <div class="solution-card">
+                    <div class="solution-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
+                    <h3 data-ar="تحليل تلقائي ذكي" data-en="Smart Automatic Analysis">تحليل تلقائي ذكي</h3>
+                    <p data-ar="الذكاء الاصطناعي يحلل طعامك فوراً ويعطيك النتائج بثوانٍ"
+                        data-en="AI analyzes your food instantly and gives you results in seconds">
+                        الذكاء الاصطناعي يحلل طعامك فوراً ويعطيك النتائج بثوانٍ
+                    </p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+                    <h3 data-ar="محتوى شامل بالعربية" data-en="Comprehensive Arabic Content">محتوى شامل بالعربية</h3>
+                    <p data-ar="قاعدة بيانات كاملة بالعربية مع دعم RTL كامل"
+                        data-en="Complete Arabic database with full RTL support">
+                        قاعدة بيانات كاملة بالعربية مع دعم RTL كامل
+                    </p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon" aria-hidden="true"><i class="fas fa-plane-slash"></i></div>
+                    <h3 data-ar="يعمل بدون إنترنت 100%" data-en="100% Offline Functionality">يعمل بدون إنترنت 100%</h3>
+                    <p data-ar="كل شيء محفوظ محلياً، استخدمه في أي مكان وزمان"
+                        data-en="Everything stored locally, use it anywhere, anytime">
+                        كل شيء محفوظ محلياً، استخدمه في أي مكان وزمان
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="مميزات RenalFlow" data-en="RenalFlow Features">
+                    مميزات RenalFlow
+                </h2>
+                <p class="section-subtitle" data-ar="كل ما تحتاجه لإدارة صحتك الكلوية في تطبيق واحد"
+                    data-en="Everything you need to manage your kidney health in one app">
+                    كل ما تحتاجه لإدارة صحتك الكلوية في تطبيق واحد
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-ar="تحليل غذائي ذكي بالـ AI" data-en="Smart AI Nutritional Analysis">تحليل غذائي ذكي بالـ
+                        AI</h3>
+                    <p data-ar="تحليل فوري ودقيق للعناصر الغذائية مع توصيات مخصصة لحالتك"
+                        data-en="Instant and accurate nutritional analysis with personalized recommendations">
+                        تحليل فوري ودقيق للعناصر الغذائية مع توصيات مخصصة لحالتك
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-ar="مساعد AI (مُرشِد)" data-en="AI Assistant (Murshid)">مساعد AI (مُرشِد)</h3>
+                    <p data-ar="مساعد ذكي يجيب على أسئلتك الطبية والغذائية على مدار الساعة"
+                        data-en="Smart assistant that answers your medical and nutritional questions 24/7">
+                        مساعد ذكي يجيب على أسئلتك الطبية والغذائية على مدار الساعة
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 data-ar="تحليل بصري للطعام" data-en="Visual Food Recognition">تحليل بصري للطعام</h3>
+                    <p data-ar="التقط صورة لطعامك واحصل على تحليل غذائي فوري"
+                        data-en="Take a photo of your food and get instant nutritional analysis">
+                        التقط صورة لطعامك واحصل على تحليل غذائي فوري
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-ar="تتبع المختبرات" data-en="Lab Tracking">تتبع المختبرات</h3>
+                    <p data-ar="سجّل وتتبع نتائج تحاليلك مع رسوم بيانية تفاعلية"
+                        data-en="Record and track your lab results with interactive charts">
+                        سجّل وتتبع نتائج تحاليلك مع رسوم بيانية تفاعلية
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3 data-ar="تقارير طبية احترافية" data-en="Professional Medical Reports">تقارير طبية احترافية</h3>
+                    <p data-ar="صدّر تقارير PDF شاملة لمشاركتها مع طبيبك"
+                        data-en="Export comprehensive PDF reports to share with your doctor">
+                        صدّر تقارير PDF شاملة لمشاركتها مع طبيبك
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 data-ar="إدارة السوائل" data-en="Fluid Management">إدارة السوائل</h3>
+                    <p data-ar="تتبع دقيق لكمية السوائل مع تنبيهات ذكية"
+                        data-en="Precise fluid intake tracking with smart alerts">
+                        تتبع دقيق لكمية السوائل مع تنبيهات ذكية
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-wifi-slash"></i>
+                    </div>
+                    <h3 data-ar="يعمل بدون إنترنت" data-en="Works Offline">يعمل بدون إنترنت</h3>
+                    <p data-ar="جميع المميزات متاحة بدون الحاجة للاتصال بالإنترنت"
+                        data-en="All features available without internet connection">
+                        جميع المميزات متاحة بدون الحاجة للاتصال بالإنترنت
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-ar="دعم كامل للعربية" data-en="Full Arabic Support">دعم كامل للعربية</h3>
+                    <p data-ar="واجهة عربية كاملة مع دعم RTL ومحتوى طبي مترجم"
+                        data-en="Complete Arabic interface with RTL support and translated medical content">
+                        واجهة عربية كاملة مع دعم RTL ومحتوى طبي مترجم
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="كيف يعمل RenalFlow" data-en="How RenalFlow Works">
+                    كيف يعمل RenalFlow
+                </h2>
+                <p class="section-subtitle" data-ar="ثلاث خطوات بسيطة لبدء رحلتك نحو صحة أفضل"
+                    data-en="Three simple steps to start your journey to better health">
+                    ثلاث خطوات بسيطة لبدء رحلتك نحو صحة أفضل
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-ar="أنشئ ملفك الصحي" data-en="Create Your Health Profile">أنشئ ملفك الصحي</h3>
+                        <p data-ar="أدخل معلوماتك الأساسية ومرحلة CKD الخاصة بك لنخصص التجربة لك"
+                            data-en="Enter your basic information and CKD stage to personalize your experience">
+                            أدخل معلوماتك الأساسية ومرحلة CKD الخاصة بك لنخصص التجربة لك
+                        </p>
+                    </div>
+                    <div class="timeline-number">1</div>
+                    <div></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div></div>
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3 data-ar="ابحث وحلل طعامك" data-en="Search and Analyze Your Food">ابحث وحلل طعامك</h3>
+                        <p data-ar="استخدم البحث الذكي أو التحليل البصري للحصول على معلومات غذائية دقيقة"
+                            data-en="Use smart search or visual analysis to get accurate nutritional information">
+                            استخدم البحث الذكي أو التحليل البصري للحصول على معلومات غذائية دقيقة
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-ar="تتبع وحسّن صحتك" data-en="Track and Improve Your Health">تتبع وحسّن صحتك</h3>
+                        <p data-ar="راقب تقدمك، سجّل تحاليلك، واحصل على توصيات مخصصة من مُرشِد"
+                            data-en="Monitor your progress, record your labs, and get personalized recommendations from Murshid">
+                            راقب تقدمك، سجّل تحاليلك، واحصل على توصيات مخصصة من مُرشِد
+                        </p>
+                    </div>
+                    <div class="timeline-number">3</div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Carousel -->
+    <section class="screenshots-carousel">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="لقطات من التطبيق" data-en="App Screenshots">
+                    لقطات من التطبيق
+                </h2>
+                <p class="section-subtitle" data-ar="استكشف واجهة التطبيق البسيطة والجميلة"
+                    data-en="Explore the app's simple and beautiful interface">
+                    استكشف واجهة التطبيق البسيطة والجميلة
+                </p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="images/screenshots/screen1.png" alt="RenalFlow Dashboard showing kidney health stats"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/screenshots/screen2.png" alt="Food Search interface with nutritional values"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/screenshots/screen3.png" alt="Murshid AI Assistant chat interface"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/screenshots/screen4.png" alt="Lab Analytics charts for kidney biomarkers"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/screenshots/screen5.png" alt="Professional Clinical Report PDF preview"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/screenshots/screen1.png" alt="Patient Health Profile setup" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="آراء المستخدمين" data-en="User Testimonials">
+                    آراء المستخدمين
+                </h2>
+                <p class="section-subtitle" data-ar="ماذا يقول مستخدمو RenalFlow"
+                    data-en="What RenalFlow users are saying">
+                    ماذا يقول مستخدمو RenalFlow
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text"
+                        data-ar="التطبيق غير حياتي! أصبح من السهل جداً تتبع نظامي الغذائي ومعرفة ما يمكنني تناوله. مُرشِد يجيب على جميع أسئلتي بشكل فوري."
+                        data-en="This app changed my life! It's so easy to track my diet and know what I can eat. Murshid answers all my questions instantly.">
+                        التطبيق غير حياتي! أصبح من السهل جداً تتبع نظامي الغذائي ومعرفة ما يمكنني تناوله. مُرشِد يجيب
+                        على جميع أسئلتي بشكل فوري.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">أ</div>
+                        <div class="author-info">
+                            <h4 data-ar="أحمد محمد" data-en="Ahmed Mohammed">أحمد محمد</h4>
+                            <p data-ar="مريض CKD المرحلة 3" data-en="CKD Stage 3 Patient">مريض CKD المرحلة 3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text"
+                        data-ar="كنت أبحث عن تطبيق عربي موثوق، وأخيراً وجدته! التقارير الطبية ممتازة وأشاركها مع طبيبي في كل زيارة."
+                        data-en="I was looking for a reliable Arabic app, and finally found it! The medical reports are excellent and I share them with my doctor at every visit.">
+                        كنت أبحث عن تطبيق عربي موثوق، وأخيراً وجدته! التقارير الطبية ممتازة وأشاركها مع طبيبي في كل
+                        زيارة.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">س</div>
+                        <div class="author-info">
+                            <h4 data-ar="سارة علي" data-en="Sara Ali">سارة علي</h4>
+                            <p data-ar="مريضة CKD المرحلة 4" data-en="CKD Stage 4 Patient">مريضة CKD المرحلة 4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text"
+                        data-ar="ميزة التحليل البصري رائعة! ألتقط صورة للطعام وأحصل على التحليل فوراً. التطبيق يعمل بدون إنترنت وهذا مهم جداً."
+                        data-en="The visual analysis feature is amazing! I take a photo of food and get the analysis instantly. The app works offline which is very important.">
+                        ميزة التحليل البصري رائعة! ألتقط صورة للطعام وأحصل على التحليل فوراً. التطبيق يعمل بدون إنترنت
+                        وهذا مهم جداً.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">خ</div>
+                        <div class="author-info">
+                            <h4 data-ar="خالد عبدالله" data-en="Khaled Abdullah">خالد عبدالله</h4>
+                            <p data-ar="مريض CKD المرحلة 5" data-en="CKD Stage 5 Patient">مريض CKD المرحلة 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">
+                    الأسئلة الشائعة
+                </h2>
+                <p class="section-subtitle" data-ar="إجابات على أكثر الأسئلة شيوعاً"
+                    data-en="Answers to the most common questions">
+                    إجابات على أكثر الأسئلة شيوعاً
+                </p>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-ar="هل التطبيق مجاني؟" data-en="Is the app free?">هل التطبيق مجاني؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p data-ar="نعم، التطبيق مجاني بالكامل ولا يحتوي على إعلانات. جميع المميزات متاحة لجميع المستخدمين بدون أي رسوم."
+                            data-en="Yes, the app is completely free with no ads. All features are available to all users without any fees.">
+                            نعم، التطبيق مجاني بالكامل ولا يحتوي على إعلانات. جميع المميزات متاحة لجميع المستخدمين بدون
+                            أي رسوم.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-ar="هل يعمل التطبيق بدون إنترنت؟" data-en="Does the app work offline?">هل يعمل التطبيق
+                        بدون إنترنت؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p data-ar="نعم، جميع المميزات الأساسية تعمل بدون إنترنت. فقط مُرشِد (المساعد AI) والتحليل البصري يحتاجان اتصال بالإنترنت."
+                            data-en="Yes, all core features work offline. Only Murshid (AI assistant) and visual analysis require internet connection.">
+                            نعم، جميع المميزات الأساسية تعمل بدون إنترنت. فقط مُرشِد (المساعد AI) والتحليل البصري
+                            يحتاجان اتصال بالإنترنت.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-ar="هل البيانات آمنة؟" data-en="Is my data safe?">هل البيانات آمنة؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p data-ar="نعم، جميع بياناتك محفوظة محلياً على جهازك فقط. لا نرسل أو نخزن أي معلومات شخصية على خوادمنا."
+                            data-en="Yes, all your data is stored locally on your device only. We don't send or store any personal information on our servers.">
+                            نعم، جميع بياناتك محفوظة محلياً على جهازك فقط. لا نرسل أو نخزن أي معلومات شخصية على خوادمنا.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-ar="هل التطبيق متوفر لـ iOS؟" data-en="Is the app available for iOS?">هل التطبيق متوفر لـ
+                        iOS؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p data-ar="حالياً التطبيق متوفر فقط لأجهزة Android. نسخة iOS قيد التطوير وستكون متاحة قريباً."
+                            data-en="Currently the app is only available for Android devices. iOS version is under development and will be available soon.">
+                            حالياً التطبيق متوفر فقط لأجهزة Android. نسخة iOS قيد التطوير وستكون متاحة قريباً.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="download-title" data-ar="ابدأ رحلتك نحو صحة أفضل اليوم"
+                    data-en="Start Your Journey to Better Health Today">
+                    ابدأ رحلتك نحو صحة أفضل اليوم
+                </h2>
+                <p class="download-description"
+                    data-ar="حمّل RenalFlow الآن مجاناً واحصل على مساعدك الذكي لإدارة صحة الكلى"
+                    data-en="Download RenalFlow now for free and get your smart kidney health management assistant">
+                    حمّل RenalFlow الآن مجاناً واحصل على مساعدك الذكي لإدارة صحة الكلى
+                </p>
+
+                <div class="download-details">
+                    <div class="detail-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-ar="مجاني بالكامل" data-en="Completely Free">مجاني بالكامل</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-ar="بدون إعلانات" data-en="No Ads">بدون إعلانات</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-ar="يعمل بدون إنترنت" data-en="Works Offline">يعمل بدون إنترنت</span>
+                    </div>
+                </div>
+
+                <a href="assets/renalflow-v1.0.apk" download class="btn btn-download">
+                    <i class="fab fa-android"></i>
+                    <span data-ar="تحميل APK (مجاناً)" data-en="Download APK (Free)">تحميل APK (مجاناً)</span>
+                </a>
+
+                <p class="download-info" data-ar="الإصدار 1.0 | Android 5.0+ | حجم الملف: ~50MB"
+                    data-en="Version 1.0 | Android 5.0+ | File Size: ~50MB">
+                    الإصدار 1.0 | Android 5.0+ | حجم الملف: ~50MB
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="RenalFlow Logo" width="60">
+                    <h3 data-ar="رينال فلو" data-en="RenalFlow">رينال فلو</h3>
+                    <p class="footer-description"
+                        data-ar="مساعدك الذكي لإدارة صحة الكلى. تطبيق شامل يجمع بين الذكاء الاصطناعي والمعرفة الطبية لمساعدتك على عيش حياة أفضل."
+                        data-en="Your smart kidney health management assistant. A comprehensive app that combines AI and medical knowledge to help you live a better life.">
+                        مساعدك الذكي لإدارة صحة الكلى. تطبيق شامل يجمع بين الذكاء الاصطناعي والمعرفة الطبية لمساعدتك على
+                        عيش حياة أفضل.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="#features" data-ar="المميزات" data-en="Features">المميزات</a></li>
+                        <li><a href="#how-it-works" data-ar="كيف يعمل" data-en="How It Works">كيف يعمل</a></li>
+                        <li><a href="#download" data-ar="التحميل" data-en="Download">التحميل</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-ar="الدعم" data-en="Support">الدعم</h4>
+                    <ul>
+                        <li><a href="#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+                        <li><a href="mailto:ferasswed2022@gmail.com" data-ar="اتصل بنا" data-en="Contact Us">اتصل
+                                بنا</a>
+                        </li>
+                        <li><a href="#privacy" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a></li>
+                        <li><a href="#terms" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-ar="تواصل معنا" data-en="Connect">تواصل معنا</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/feras-swed-722383205/" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/feras-swed" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-ar="© 2026 RenalFlow. جميع الحقوق محفوظة. صُنع بـ ❤️ من أجل صحة أفضل للجميع."
+                    data-en="© 2026 RenalFlow. All rights reserved. Made with ❤️ for better health for everyone.">
+                    © 2026 RenalFlow. جميع الحقوق محفوظة. صُنع بـ ❤️ من أجل صحة أفضل للجميع.
+                </p>
+                <p>
+                    <span data-ar="طوّره" data-en="Developed by">طوّره</span>
+                    <a href="https://www.linkedin.com/in/feras-swed-722383205/" target="_blank">Feras Swed</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

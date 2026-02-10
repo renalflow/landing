@@ -1,0 +1,218 @@
+/* ============================================
+   RenalFlow Landing Page - CSS Variables
+   ============================================ */
+
+:root {
+  /* ===== Brand Colors - Warm/Medical Theme ===== */
+  /* Extracted from AppTheme.dart */
+  --primary-sage: #2A9D8F;
+  /* Vibrant Sage */
+  --primary-teal: #4DB6AC;
+  /* Soft Teal */
+  --primary-cyan: #26A69A;
+  /* Deeper Teal for hover */
+
+  /* ===== Secondary Colors ===== */
+  --secondary-blue: #4DB6AC;
+  /* Using Soft Teal as secondary to match app */
+  --secondary-green: #2A9D8F;
+  /* Using Sage as green */
+  --accent-apricot: #FF8A65;
+  /* Warm Accent */
+  --accent-red: #E57373;
+  /* Soft Error Red */
+
+  /* ===== Neutral Colors - Warm Grays ===== */
+  --neutral-50: #FDFCF8;
+  /* Cream/Beige Background */
+  --neutral-100: #F5F5F0;
+  /* Slightly darker cream */
+  --neutral-200: #E6E6E0;
+  --neutral-300: #D1D1C7;
+  --neutral-400: #A0A096;
+  --neutral-500: #787870;
+  --neutral-600: #636E72;
+  --neutral-700: #4B5559;
+  /* Warm Dark Gray */
+  --neutral-800: #363E40;
+  --neutral-900: #2D3436;
+  /* Charcoal - Main Text */
+
+  /* ===== Gradients ===== */
+  /* Warmer, softer gradients */
+  --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #4DB6AC 100%);
+  --gradient-hero: linear-gradient(135deg, #2A9D8F 0%, #00897B 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(45, 52, 54, 0.6) 0%, rgba(45, 52, 54, 0.3) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(42, 157, 143, 0.08) 0%, rgba(77, 182, 172, 0.08) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+
+  /* ===== Typography ===== */
+  --font-arabic: 'Cairo', 'Tajawal', sans-serif;
+  --font-english: 'Inter', 'Roboto', sans-serif;
+
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.25rem;
+  /* 20px */
+  --font-size-2xl: 1.5rem;
+  /* 24px */
+  --font-size-3xl: 1.875rem;
+  /* 30px */
+  --font-size-4xl: 2.25rem;
+  /* 36px */
+  --font-size-5xl: 3rem;
+  /* 48px */
+  --font-size-6xl: 3.75rem;
+  /* 60px */
+  --font-size-7xl: 4.5rem;
+  /* 72px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ===== Spacing ===== */
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-2xl: 3rem;
+  /* 48px */
+  --spacing-3xl: 4rem;
+  /* 64px */
+  --spacing-4xl: 6rem;
+  /* 96px */
+  --spacing-5xl: 8rem;
+  /* 128px */
+
+  /* ===== Border Radius ===== */
+  --radius-sm: 0.25rem;
+  /* 4px */
+  --radius-md: 0.5rem;
+  /* 8px */
+  --radius-lg: 0.75rem;
+  /* 12px */
+  --radius-xl: 1rem;
+  /* 16px */
+  --radius-2xl: 1.5rem;
+  /* 24px */
+  --radius-3xl: 2rem;
+  /* 32px */
+  --radius-full: 9999px;
+
+  /* ===== Shadows ===== */
+  /* Softer shadows for the warm theme */
+  --shadow-sm: 0 1px 2px 0 rgba(45, 52, 54, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(45, 52, 54, 0.08), 0 2px 4px -1px rgba(45, 52, 54, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(45, 52, 54, 0.08), 0 4px 6px -2px rgba(45, 52, 54, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(45, 52, 54, 0.08), 0 10px 10px -5px rgba(45, 52, 54, 0.03);
+  --shadow-2xl: 0 25px 50px -12px rgba(45, 52, 54, 0.2);
+  --shadow-glow: 0 0 20px rgba(42, 157, 143, 0.25);
+  --shadow-glow-strong: 0 0 40px rgba(42, 157, 143, 0.4);
+
+  /* ===== Transitions ===== */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ===== Z-Index Layers ===== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* ===== Container ===== */
+  --container-max-width: 1280px;
+  --container-padding: var(--spacing-md);
+
+  /* ===== Breakpoints (for JS) ===== */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ===== Semantic Variables ===== */
+  /* Main Theme (Warm/Light) */
+  --bg-body: var(--neutral-50);
+  /* Cream */
+  --bg-surface: #FFFFFF;
+  /* White */
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --bg-card: #FFFFFF;
+
+  --text-main: var(--neutral-900);
+  /* Charcoal */
+  --text-muted: var(--neutral-600);
+  --text-inverted: #FFFFFF;
+
+  --border-color: var(--neutral-200);
+
+  --bg-footer: var(--neutral-900);
+  /* Charcoal Footer */
+  --bg-navbar-scrolled: rgba(253, 252, 248, 0.95);
+  /* Cream Glass */
+  --bg-input: #FFFFFF;
+}
+
+/* ===== Dark Mode Variables (Refined Warm Dark) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Warmer dark shades */
+    --neutral-50: #1A1D1E;
+    /* Deep Warm Gray */
+    --neutral-100: #252829;
+    --neutral-200: #35393B;
+    --neutral-300: #4B5559;
+    --neutral-800: #E6E6E0;
+    --neutral-900: #FDFCF8;
+    /* Cream Text in Dark Mode */
+
+    /* Semantic Overrides */
+    --bg-surface: var(--neutral-100);
+    --bg-surface-glass: rgba(37, 40, 41, 0.85);
+    --bg-card: var(--neutral-100);
+
+    --text-muted: var(--neutral-400);
+    --border-color: var(--neutral-700);
+
+    --bg-footer: #151718;
+    /* Very Deep Warm Gray */
+    --bg-navbar-scrolled: rgba(26, 29, 30, 0.95);
+    --bg-input: var(--neutral-100);
+  }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  :root {
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+    --shadow-2xl: none;
+  }
+}

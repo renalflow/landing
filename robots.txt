@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renalflow.app/sitemap.xml
+
+# Disallow specific paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
