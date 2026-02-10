@@ -162,7 +162,8 @@ git push -u origin main
 **Feras Swed**
 - LinkedIn: [feras-swed](https://www.linkedin.com/in/feras-swed-722383205/)
 - GitHub: [@feras-swed](https://github.com/feras-swed)
-- Email: feras.swed@example.com
+- Email: [EMAIL_ADDRESS](mailto:[ferasswed2022@gmail.com])  
+
 
 ## 📄 الترخيص
 
