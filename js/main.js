@@ -456,21 +456,31 @@ function initializeDownloadModal() {
     const updateDownloadButton = () => {
         if (consentCheckbox.checked) {
             modalDownloadBtn.style.opacity = '1';
-            modalDownloadBtn.style.pointerEvents = 'auto';
-            modalDownloadBtn.removeAttribute('disabled');
+            modalDownloadBtn.style.cursor = 'pointer';
         } else {
             modalDownloadBtn.style.opacity = '0.5';
-            modalDownloadBtn.style.pointerEvents = 'none';
-            modalDownloadBtn.setAttribute('disabled', 'true');
+            modalDownloadBtn.style.cursor = 'not-allowed';
         }
     };
 
     consentCheckbox.addEventListener('change', updateDownloadButton);
 
-    // Allow download and close modal
-    modalDownloadBtn.addEventListener('click', () => {
+    // Handle download button click
+    modalDownloadBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default link behavior
+
         if (consentCheckbox.checked) {
-            setTimeout(closeModal, 500);
+            // Programmatically trigger download
+            const downloadUrl = modalDownloadBtn.getAttribute('href');
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = 'RenalFlow.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Close modal after download starts
+            setTimeout(closeModal, 800);
         }
     });
 }
