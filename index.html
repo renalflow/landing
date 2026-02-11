@@ -99,6 +99,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
                 <li><a href="#features" data-ar="المميزات" data-en="Features">المميزات</a></li>
+                <li><a href="about.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
                 <li><a href="#how-it-works" data-ar="كيف يعمل" data-en="How It Works">كيف يعمل</a></li>
                 <li><a href="#testimonials" data-ar="آراء المستخدمين" data-en="Testimonials">آراء المستخدمين</a></li>
                 <li><a href="#download" data-ar="التحميل" data-en="Download">التحميل</a></li>
@@ -743,8 +744,10 @@
                         <li><a href="mailto:ferasswed2022@gmail.com" data-ar="اتصل بنا" data-en="Contact Us">اتصل
                                 بنا</a>
                         </li>
-                        <li><a href="#privacy" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a></li>
-                        <li><a href="#terms" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a></li>
+                        <li><a href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+                        </li>
+                        <li><a href="terms.html" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -754,6 +757,9 @@
                         <a href="https://www.linkedin.com/in/feras-swed-722383205/" target="_blank" class="social-link"
                             aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/967737972946" target="_blank" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                         <a href="https://github.com/feras-swed" target="_blank" class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
@@ -777,6 +783,54 @@
             </div>
         </div>
     </footer>
+
+    </button>
+
+    <!-- Download Consent Modal -->
+    <div class="modal-overlay" id="downloadModal" style="display: none;">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="modal-close" id="closeModal" aria-label="Close Modal">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header">
+                <i class="fas fa-download"
+                    style="font-size: 3rem; color: var(--primary-azure); margin-bottom: var(--spacing-md);"></i>
+                <h2 data-ar="تحميل التطبيق" data-en="Download App">تحميل التطبيق</h2>
+            </div>
+
+            <div class="modal-body">
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: var(--spacing-lg);"
+                    data-ar="قبل تحميل التطبيق، يرجى قراءة والموافقة على الشروط التالية:"
+                    data-en="Before downloading the app, please read and agree to the following terms:">
+                    قبل تحميل التطبيق، يرجى قراءة والموافقة على الشروط التالية:
+                </p>
+
+                <div class="consent-checkbox"
+                    style="display: flex; align-items: flex-start; gap: var(--spacing-md); margin-bottom: var(--spacing-xl); padding: var(--spacing-md); background: rgba(0, 168, 255, 0.05); border-radius: var(--radius-lg); border: 2px solid transparent; transition: all 0.3s ease;">
+                    <input type="checkbox" id="consentCheck"
+                        style="margin-top: 4px; width: 20px; height: 20px; cursor: pointer; accent-color: var(--primary-azure);">
+                    <label for="consentCheck" style="cursor: pointer; line-height: 1.6; color: var(--text-primary);">
+                        <span data-ar="أوافق على " data-en="I agree to ">أوافق على </span>
+                        <a href="privacy.html" target="_blank"
+                            style="color: var(--primary-azure); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--primary-azure);"
+                            data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+                        <span data-ar=" و " data-en=" and "> و </span>
+                        <a href="terms.html" target="_blank"
+                            style="color: var(--primary-azure); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--primary-azure);"
+                            data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+                    </label>
+                </div>
+
+                <a href="https://github.com/renalflow/landing/releases/download/v1.0.0/app-release.apk"
+                    id="modalDownloadBtn" class="btn btn-primary btn-large"
+                    style="width: 100%; opacity: 0.5; pointer-events: none; transition: all 0.3s ease;" disabled>
+                    <i class="fas fa-download"></i>
+                    <span data-ar="تحميل التطبيق (50 MB)" data-en="Download App (50 MB)">تحميل التطبيق (50 MB)</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top" aria-label="Scroll to Top">

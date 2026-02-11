@@ -419,6 +419,69 @@ document.querySelectorAll('.btn-download, .btn-primary[href*="apk"]').forEach(bt
     });
 });
 
+// ===== Download Consent Modal =====
+function initializeDownloadModal() {
+    const modal = document.getElementById('downloadModal');
+    const closeBtn = document.getElementById('closeModal');
+    const consentCheckbox = document.getElementById('consentCheck');
+    const modalDownloadBtn = document.getElementById('modalDownloadBtn');
+    const downloadButtons = document.querySelectorAll('a[href*="app-release.apk"]');
+
+    if (!modal || !consentCheckbox || !modalDownloadBtn) return;
+
+    // Intercept all download button clicks
+    downloadButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    const closeModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        consentCheckbox.checked = false;
+        updateDownloadButton();
+    };
+
+    closeBtn?.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Handle checkbox state
+    const updateDownloadButton = () => {
+        if (consentCheckbox.checked) {
+            modalDownloadBtn.style.opacity = '1';
+            modalDownloadBtn.style.pointerEvents = 'auto';
+            modalDownloadBtn.removeAttribute('disabled');
+        } else {
+            modalDownloadBtn.style.opacity = '0.5';
+            modalDownloadBtn.style.pointerEvents = 'none';
+            modalDownloadBtn.setAttribute('disabled', 'true');
+        }
+    };
+
+    consentCheckbox.addEventListener('change', updateDownloadButton);
+
+    // Allow download and close modal
+    modalDownloadBtn.addEventListener('click', () => {
+        if (consentCheckbox.checked) {
+            setTimeout(closeModal, 500);
+        }
+    });
+}
+
+// Initialize modal after DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeDownloadModal);
+} else {
+    initializeDownloadModal();
+}
+
 // ===== Export for use in other scripts =====
 window.RenalFlow = {
     STATE,

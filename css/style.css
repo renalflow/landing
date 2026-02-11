@@ -2722,4 +2722,187 @@ section {
 @media (prefers-color-scheme: dark) {
     /* This can be implemented if needed */
     /* For now, we'll keep the light theme */
+}/* ===== About Us Page Styles ===== */
+.micro-hero {
+    padding: var(--spacing-5xl) 0 var(--spacing-3xl);
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: radial-gradient(circle at top right, rgba(0, 168, 255, 0.05), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(0, 251, 173, 0.05), transparent 40%);
+}
+
+.micro-hero .section-title {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-md);
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mission-vision {
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+}
+
+.academic-context {
+    background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    box-shadow: var(--shadow-lg);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .micro-hero {
+        padding-top: 120px;
+        min-height: auto;
+    }
+
+    .micro-hero .section-title {
+        font-size: var(--font-size-3xl);
+    }
+}
+/* ===== Helper Classes ===== */
+.active-link {
+    color: var(--primary-azure) !important;
+    font-weight: 700 !important;
+}
+
+@media (max-width: 768px) {
+    .single-col-mobile {
+        grid-template-columns: 1fr !important;
+    }
+
+    .privacy-section .feature-card {
+        text-align: center;
+    }
+}
+/* ===== Download Consent Modal ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: var(--spacing-lg);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--bg-surface);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(90deg);
+}
+
+.modal-close i {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.modal-header {
+    text-align: center;
+    padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modal-header h2 {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: var(--font-size-2xl);
+}
+
+.modal-body {
+    padding: var(--spacing-2xl);
+}
+
+.consent-checkbox:has(input:checked) {
+    border-color: var(--primary-azure) !important;
+    background: rgba(0, 168, 255, 0.1) !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+    }
+
+    .modal-header {
+        padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-lg);
+    }
+
+    .modal-body {
+        padding: var(--spacing-lg);
+    }
 }
