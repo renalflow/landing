@@ -1,5 +1,5 @@
 /**
- * RenalFlow Landing Page - Main JavaScript
+ * Renal Care Landing Page - Main JavaScript
  * Core functionality and interactions
  */
 
@@ -384,7 +384,7 @@ function throttle(func, limit) {
 // ===== Visibility Tracker (Smart Titles) =====
 function initializeVisibilityTracker() {
     const originalTitle = document.title;
-    const farewellMessage = 'نفتقدك! عد لـ RenalFlow 🏥';
+    const farewellMessage = 'نفتقدك! عد لـ Renal Care 🏥';
 
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
@@ -474,7 +474,7 @@ function initializeDownloadModal() {
             const downloadUrl = modalDownloadBtn.getAttribute('href');
             const link = document.createElement('a');
             link.href = downloadUrl;
-            link.download = 'RenalFlow.apk';
+            link.download = 'Renal Care.apk';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

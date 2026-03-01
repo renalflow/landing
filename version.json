@@ -3,5 +3,6 @@
     "buildNumber": 1,
     "apkUrl": "https://github.com/renalflow/landing/releases/download/v1.0.0/app-release.apk",
     "releaseNotes": "تم إضافة ميزة كذا وإصلاح مشكلة كذا",
+    "appName": "Renal Care",
     "isCritical": false
 }
